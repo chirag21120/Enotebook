@@ -5,12 +5,17 @@ body{
   background-color: rgba(128, 128, 128, 0.088);
 
 }
-#title{
+#title,#etitle{
   padding: 2px 10px;
   border: 1px solid black;
   border-radius: 15px;
 }
 
+#tags,#etags{
+  padding: 2px 10px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
 
 h5{
   margin: 5px;
