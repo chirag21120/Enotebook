@@ -11,7 +11,7 @@ export default function Home(props) {
     <div className="container my-3 ">
       <h1>Welcomes to iNotebook</h1>
       <hr/>
-      <Notes/>
+      <Notes showAlert={props.showAlert}/>
       </div>
     </>
   )
