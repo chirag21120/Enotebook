@@ -1,3 +1,5 @@
+This is a cloud based note's app. User can create their account and start storing their notes. The notes are being stored on MongoDB's Atlas. To view your notes from different devices, just login into your account and you will be able access your notes
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -13,6 +15,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+### `npm run both`
+
+Starts both the devlopment server of react as well as node server using nodemon
 
 ### `npm test`
 
