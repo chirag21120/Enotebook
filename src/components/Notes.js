@@ -49,14 +49,14 @@ const handleClick = (e) => {
         Launch demo modal
       </button>
       <div
-        className="modal fade"
+        className="modal fade "
         id="exampleModal"
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div className="modal-dialog">
-          <div className="modal-content">
+        <div className="modal-dialog ">
+          <div className="modal-content model">
             <div className="modal-header">
               <h1 className="modal-title fs-5" id="exampleModalLabel">
                 Edit Note
@@ -95,7 +95,6 @@ const handleClick = (e) => {
             minLength={1}
           required
           ></textarea>
-          <label htmlFor="floatingTextarea2">Comments</label>
         </div>
         <h5 className="card-title">Tags</h5>
         <input
@@ -132,11 +131,13 @@ const handleClick = (e) => {
         <div className="container">
             {notes.length===0 && "No notes to Display"}
         </div>
+        <div className="notes">
         {notes.map((note) => {
           return (
             <NoteItem key={note._id} updateNote={updateNote} showAlert={props.showAlert} note={note} />
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </>
   );

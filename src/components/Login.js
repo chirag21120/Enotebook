@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {  useNavigate } from "react-router-dom";
+// import '../Login.css'
 function Login(props) {
     const [credential,setCredential] =useState({email:"",password:""});
     let navigate = useNavigate();
@@ -31,19 +32,31 @@ function Login(props) {
     }
     return (
     <>
-    <div className="container">
-      <form onSubmit={handleLogin}>
-  <div className="mb-3">
-    <label htmlFor="email" className="form-label">Email address</label>
-    <input type="email" className="form-control" id="email" name='email' value={credential.email} required onChange={onChange} aria-describedby="emailHelp" />
-    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div className="mb-3">
-    <label htmlFor="password" className="form-label">Password</label>
-    <input type="password" className="form-control" id="password" required name='password' value={credential.password} onChange={onChange} />
-  </div>
-  <button type="submit" className="btn btn-primary" >Login</button>
-</form>
+<div className="containr">
+	<div className="screen">
+		<div className="screen__content">
+			<form className="login" onSubmit={handleLogin}>
+				<div className="login__field">
+					<i className="login__icon fas fa-user"></i>
+					<input type="text" className="login__input form-control" id='email' name='email' placeholder="User name / Email" value={credential.email} required onChange={onChange} />
+				</div>
+				<div className="login__field">
+					<i className="login__icon fas fa-lock"></i>
+					<input type="password" className="login__input form-control" placeholder="Password" id="password" required name='password' value={credential.password} onChange={onChange} />
+				</div>
+				<button className="button login__submit" type='submit'>
+					<span className="button__text">Log In Now</span>
+					<i className="button__icon fas fa-chevron-right"></i>
+				</button>				
+			</form>
+		</div>
+		<div className="screen__background">
+			<span className="screen__background__shape screen__background__shape4"></span>
+			<span className="screen__background__shape screen__background__shape3"></span>		
+			<span className="screen__background__shape screen__background__shape2"></span>
+			<span className="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
 </div>
     </>
   )

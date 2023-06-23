@@ -20,7 +20,7 @@ function AddNote(props) {
     setNote({...note,[e.target.name]:e.target.value})
   };
   return (
-    <div className="card my-5" style={{ width: "30rem" }}>
+    <div className="card2 my-5" style={{ width: "30rem" }}>
       <form className="card-body">
         <h5 className="card-title">Add title</h5>
         <input
